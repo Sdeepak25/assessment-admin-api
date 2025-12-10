@@ -1,52 +1,5 @@
 <?php
 
-// namespace App\Http\Controllers\Api;
-
-// use Illuminate\Http\Request;
-// use App\Models\Test;
-// use App\Models\TestSection;
-
-// class TestSectionController extends ApiController
-// {
-//     public function store(Request $request, $testId)
-//     {
-//         $tenantId = $request->user()->tenant_id;
-
-//         $test = Test::where('tenant_id', $tenantId)->findOrFail($testId);
-
-//         $data = $request->validate([
-//             'title'       => 'required|string',
-//             'description' => 'nullable|string',
-//             'duration'    => 'nullable|integer',
-//             'weightage'   => 'nullable|integer',
-//             'shuffle_items'=> 'boolean',
-//         ]);
-
-//         $section = $test->sections()->create($data);
-
-//         return $this->success($section, 'Section created', 201);
-//     }
-
-//     public function update(Request $request, $id)
-//     {
-//         $section = TestSection::findOrFail($id);
-
-//         $section->update($request->only([
-//             'title','description','duration','weightage','shuffle_items','sort_order'
-//         ]));
-
-//         return $this->success($section, 'Section updated');
-//     }
-
-//     public function destroy($id)
-//     {
-//         $section = TestSection::findOrFail($id);
-//         $section->delete();
-
-//         return $this->success(null, 'Section deleted');
-//     }
-// }
-
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
